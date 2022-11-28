@@ -7,12 +7,12 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody playerRB;
 
-    private float moveSpeed = 5000f;
+    private float moveSpeed = 50f;
     
     private float xAxisInput;
     private float zAxisInput;
 
-    private void Update()
+    private void FixedUpdate()
     {
         GetPlayerInput();
         MovePlayer();
@@ -26,6 +26,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        playerRB.velocity = new Vector3(xAxisInput * moveSpeed * Time.deltaTime, playerRB.velocity.y, zAxisInput * moveSpeed * Time.deltaTime);
+        playerRB.velocity += transform.right * xAxisInput * moveSpeed * Time.fixedDeltaTime + transform.forward * zAxisInput * moveSpeed * Time.fixedDeltaTime;
     }
 }
