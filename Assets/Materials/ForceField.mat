@@ -35,5 +35,5 @@ Material:
     m_Floats:
     - _Offset: -0.6
     m_Colors:
-    - _Emission: {r: 0, g: 8.3450985, b: 11.984314, a: 1}
+    - _Emission: {r: 0, g: 1.118007, b: 1.6055588, a: 1}
   m_BuildTextureStacks: []
